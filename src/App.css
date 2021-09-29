@@ -1,0 +1,426 @@
+body {
+  overflow: hidden;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+/* General */
+
+.iconButton {
+  display: block;
+  float: left;
+  cursor: pointer;
+  margin: 10px;
+}
+
+/* App */
+
+.App {
+  display: grid;
+  grid-template-columns: 18% 82%;
+  height: 100vh;
+}
+
+.App.noauth {
+  grid-template-columns: 0% 100%;
+}
+
+.App-header {
+  grid-row: 1;
+  height: 70px;
+  color: white;
+  background-color: #18202e;
+  user-select: none;
+}
+
+.App-header h2 {
+  float: left;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.badge {
+  float: right;
+  min-width: 10px;
+  padding: 3px 7px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-color: #0084ff;
+  border-radius: 10px;
+}
+
+/* Main UI */
+
+.main {
+  display: grid;
+  grid-template-rows: 70px auto;
+
+  grid-column: 2;
+
+  background-color: #f0f0f0;
+}
+
+/* Page */
+
+.Page {
+  height: 100vh;
+  padding: 0 30px;
+  overflow-y: scroll;
+}
+
+/* Forms */
+
+form {
+  font-size: 16px;
+}
+
+label {
+  display: block;
+  margin-top: 40px;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+label span {
+  font-weight: normal;
+  color: #888;
+}
+
+input,
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea {
+  display: block;
+  width: 400px;
+  padding: 10px;
+  border-radius: 3px;
+  border: solid 1px #ccc;
+  outline: none;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+input:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: #007eff;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+    0 0 0 3px rgba(0, 126, 255, 0.1);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+    0 0 0 3px rgba(0, 126, 255, 0.1);
+}
+
+input:disabled,
+input[type="text"]:disabled,
+input[type="password"]:disabled,
+input[type="email"]:disabled,
+textarea:disabled,
+.SendDataControl .sendForm.disabled {
+  background-color: #f0f0f0;
+}
+
+input[type="checkbox"],
+input[type="file"] {
+  width: auto;
+  border: none;
+  padding: 0;
+}
+
+.formSection h4 {
+  font-size: 14px;
+}
+
+.formSection .sectionFields {
+  padding: 0 20px;
+  background-color: #f3f3f3;
+  border-radius: 6px;
+}
+
+.formSection .sectionFields .fieldgroup {
+  width: 33%;
+  padding: 0 10px;
+  float: left;
+  box-sizing: border-box;
+}
+
+.formSection .sectionFields .fieldgroup label {
+  margin-top: 20px;
+}
+
+.formSection input[type="text"],
+.formSection input[type="password"],
+.formSection input[type="email"],
+.formSection textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cancelForm {
+  margin-right: 10px;
+}
+
+.cancelForm:hover {
+  background-color: #fff;
+  color: #0084ff;
+}
+
+form .Select-control {
+  width: 422px;
+  padding: 4px 0;
+}
+
+form .Select-control .Select-placeholder,
+form .Select-control .Select-value {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+form .Select-control .Select-multi-value-wrapper .Select-value {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+form p.hint {
+  font-style: italic;
+  font-size: 14px;
+  margin: 4px 0 20px 0;
+  color: #aaa;
+}
+
+form .actions {
+  margin-top: 30px;
+}
+
+.formError {
+  color: #cc0000;
+  margin-bottom: -20px;
+}
+
+/* Rooms */
+
+.Room {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 70px auto;
+  height: 100vh;
+}
+
+.Room.sidebar {
+  grid-template-columns: 75% 25%;
+}
+
+.roomContent {
+  display: grid;
+  grid-template-rows: auto minmax(min-content, 70px);
+  grid-row: 2;
+  overflow-y: scroll;
+}
+
+.roomError {
+  padding: 0 30px;
+}
+
+/* Forms List */
+
+.FormsList .formSubmission,
+.FilesList .fileUpload {
+  border: solid 1px #d7d7d7;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.formSubmission .title,
+.fileUpload .title {
+  font-weight: bold;
+  font-size: 14px;
+  margin: 0 40px 2px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.formSubmission .meta,
+.fileUpload .FileMeta {
+  margin: 0;
+  font-size: 12px;
+  color: #999;
+}
+
+.formSubmission .author,
+.fileUpload .author {
+  margin-right: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.formSubmission .date,
+.fileUpload .date {
+  display: inline-block;
+  font-size: 12px;
+  color: #999;
+}
+
+.formSubmission .formIcon,
+.fileUpload .fileIcon {
+  float: left;
+  font-size: 30px;
+  margin: 0 10px 0 0;
+}
+
+/* Modals */
+
+.Modal {
+  position: absolute;
+  min-width: 600px;
+  top: 50px;
+  left: 35%;
+  right: 35%;
+  display: grid;
+  grid-template-rows: 62px auto;
+  background-color: #fff;
+  border-radius: 5px;
+  outline: none;
+  overflow-y: hidden;
+  -webkit-box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.25);
+}
+
+.Modal .header {
+  display: block;
+  padding: 20px;
+  background-color: #f0f0f0;
+  grid-row: 1;
+  box-shadow: 0px 0px 2px rgba(0,0,0,0.35);
+  z-index: 10;
+}
+
+.Modal .header h3 {
+  margin: 0;
+}
+
+.Modal .content {
+  padding: 20px 50px;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  grid-row: 2;
+}
+
+.Modal .controls {
+  text-align: right;
+  margin: 50px 0 20px 0;
+  height: 30px;
+}
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.closeModal {
+  line-height: 24px;
+}
+
+/* Misc */
+
+.loading {
+  margin: 100px auto;
+}
+
+.btn {
+  padding: 11px 15px;
+  font-size: 16px;
+  border-radius: 3px;
+  background-color: #f3f3f3;
+  color: #666;
+  border: solid 1px #ccc;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #0084ff;
+}
+
+input[type="submit"],
+.primary-btn {
+  padding: 12px 15px;
+  font-size: 16px;
+  border-radius: 3px;
+  background-color: #007eff;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+
+input[type="submit"]:hover,
+.primary-btn:hover {
+  box-shadow: inset 0 -3px rgba(0, 0, 0, 0.25);
+}
+
+input[type="submit"]:active,
+.primary-btn:active {
+  box-shadow: none;
+}
+
+input[type="submit"].disabled,
+.primary-btn.disabled {
+  background-color: #ccc;
+  color: #f3f3f3;
+}
+
+input[type="submit"].disabled:hover,
+.primary-btn.disabled:hover {
+  box-shadow: none;
+}
+
+/* Tabs */
+
+.react-tabs__tab-list {
+  margin-bottom: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.react-tabs__tab-list li {
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 10px;
+  cursor: pointer;
+  outline: none;
+}
+
+.react-tabs__tab-list li:hover {
+  color: #007eff;
+}
+
+li.react-tabs__tab--selected {
+  font-weight: bold;
+  border-bottom: solid 2px #007eff;
+}
+
+li.react-tabs__tab--selected:hover {
+  color: inherit;
+}
